@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">devhire</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_signup">Signup</string>
+    <string name="title_activity_form">Form</string>
+    <string name="title_activity_demo">Demo</string>
+    <string name="title_activity_a2">A2</string>
+</resources>
