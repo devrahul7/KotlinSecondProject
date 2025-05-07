@@ -5,4 +5,8 @@
     <string name="title_activity_form">Form</string>
     <string name="title_activity_demo">Demo</string>
     <string name="title_activity_a2">A2</string>
+    <string name="title_activity_userregistrationform">userregistrationform</string>
+    <string name="title_activity_registrationform">Registrationform</string>
+    <string name="title_activity_registration_form">RegistrationForm</string>
+    <string name="title_activity_registration">RegistrationActivity</string>
 </resources>

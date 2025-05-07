@@ -13,6 +13,33 @@
         android:theme="@style/Theme.Devhire"
         tools:targetApi="31">
         <activity
+            android:name=".RegistrationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registration"
+            android:theme="@style/Theme.Devhire" />
+        <activity
+            android:name=".RegistrationForm"
+            android:exported="true"
+            android:label="@string/title_activity_registration_form"
+            android:theme="@style/Theme.Devhire">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".userregistrationform"
+            android:exported="true"
+            android:label="@string/title_activity_userregistrationform"
+            android:theme="@style/Theme.Devhire">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".A2"
             android:exported="true"
             android:label="@string/title_activity_a2"

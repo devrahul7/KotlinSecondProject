@@ -2,6 +2,7 @@ package com.example.devhire
 
 import android.os.Bundle
 import android.text.style.UnderlineSpan
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -44,6 +45,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -73,6 +75,10 @@ fun LoginBody(innerPadding: PaddingValues) {
     var password by remember { mutableStateOf("") }
     var passwordVisibility by remember { mutableStateOf(false) }
     var rememberMe by remember { mutableStateOf(false) }
+
+
+
+    val context = LocalContext.current
 
     Column(
         modifier = Modifier
@@ -188,18 +194,28 @@ fun LoginBody(innerPadding: PaddingValues) {
         }
 
         Spacer(modifier = Modifier.height(8.dp))
-        OutlinedButton (
-            onClick = { },
-            shape = RoundedCornerShape(13.dp),
-            modifier = Modifier.width(200.dp).padding(vertical = 8.dp)
 
+        Button(onClick = {
+            if (username == "ram@gmail.com" && password == "password"){
+                Toast.makeText(context,"login Success",Toast.LENGTH_SHORT).show()
 
+            }else{
+                Toast.makeText(context,"login Failed",Toast.LENGTH_SHORT).show()
+            }
 
-
+        },Modifier.fillMaxWidth()
+            .padding(horizontal = 20.dp), shape = RoundedCornerShape(13.dp)
         ) {
             Text("Login")
-
         }
+
+
+
+
+
+
+
+
 
         Spacer(modifier = Modifier.height(8.dp))
 
@@ -217,16 +233,20 @@ fun LoginBody(innerPadding: PaddingValues) {
 
 
             Image(
-                painter = painterResource(R.drawable.img1),
-                contentDescription = null,
-                modifier = Modifier.height(50.dp).width(50.dp)
-            )
-            Spacer(modifier = Modifier.width(10.dp))
-            Image(
                 painter = painterResource(R.drawable.img2),
                 contentDescription = null,
                 modifier = Modifier.height(50.dp).width(50.dp)
             )
+
+            Spacer(modifier = Modifier.width(10.dp))
+
+            Image(
+                painter = painterResource(R.drawable.img1),
+                contentDescription = null,
+                modifier = Modifier.height(50.dp).width(50.dp)
+            )
+
+
 
         }
 
@@ -241,3 +261,6 @@ fun LoginBody(innerPadding: PaddingValues) {
 fun LoginPreviewBody() {
     LoginBody(innerPadding = PaddingValues(0.dp))
 }
+
+
+

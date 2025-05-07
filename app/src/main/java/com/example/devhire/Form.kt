@@ -29,14 +29,11 @@ class Form : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Scaffold { padding->
-                FormBody(padding)
+            Scaffold { padding-> FormBody(padding)
             }
         }
     }
 }
-
-
 
 
 @Composable
